@@ -84,16 +84,32 @@ public class Playlist {
         return newListOfSongs;
     }
 
-    public void addSongByUser(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the song here: ");
-        String name = sc.next();
-        addSong(FromMusicBrainz.readingSong(name));
-    }
-
     public static void main(String[] args) {
         Playlist playlist = new Playlist();
-        playlist.addSongByUser();
-        System.out.println(playlist.getListOfSongs());
+        Scanner sc = new Scanner(System.in);
+        boolean continued = true;
+        int num;
+        String song;
+        while(continued) {
+            System.out.println("Enter the number of the menu:");
+            System.out.println("1. Show the playlist");
+            System.out.println("2. Add a song");
+            System.out.println("3. Exit");
+            num = sc.nextInt();
+            switch (num){
+                case 1:
+                    System.out.println(playlist.getListOfSongs());
+                    break;
+                case 2:
+                    System.out.println("Enter the name of the song you want to add here: ");
+                    song = sc.next();
+                    sc.nextLine();
+                    playlist.addSong(FromMusicBrainz.readingSong(song));
+                    break;
+                case 3:
+                    continued = false;
+                    break;
+            }
+        }
     }
 }

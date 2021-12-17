@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.net.URL;
 import java.net.URLConnection;
+import java.sql.SQLException;
 
 public class FromMusicBrainz {
 
@@ -66,8 +67,8 @@ public class FromMusicBrainz {
             Song newSong = new Song(song_name, id, album1, artist1);
             newSong.toSQL();
             return newSong;
-        } catch (Exception ex) {
-            System.out.println("XML parsing error" + ex);
+        }catch (Exception ex) {
+            System.out.println("XML parsing error or SQL error" + ex);
             return null;
         }
     }
