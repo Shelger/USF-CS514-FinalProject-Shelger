@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Show the window for users
@@ -83,5 +84,32 @@ public class GUI{
     public static void main(String[] args) {
         GUI gui = new GUI();
         gui.showGUI();
+
+        Playlist playlist = new Playlist();
+        Scanner sc = new Scanner(System.in);
+        boolean continued = true;
+        int num;
+        String song;
+        while(continued) {
+            System.out.println("Enter the number of the menu:");
+            System.out.println("1. Show the playlist");
+            System.out.println("2. Add a song");
+            System.out.println("3. Exit");
+            num = sc.nextInt();
+            switch (num){
+                case 1:
+                    System.out.println(playlist.getListOfSongs());
+                    break;
+                case 2:
+                    System.out.println("Enter the name of the song you want to add here: ");
+                    song = sc.next();
+                    sc.nextLine();
+                    playlist.addSong(FromMusicBrainz.readingSong(song));
+                    break;
+                case 3:
+                    continued = false;
+                    break;
+            }
+        }
     }
 }
