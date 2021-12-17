@@ -10,6 +10,13 @@ import java.net.URL;
 import java.net.URLConnection;
 
 public class FromMusicBrainz {
+
+    /**
+     *
+     * @param theSong It is the name of the song users want to add into the database.
+     * @return return the object Song
+     * It is similar to return Album and Artist, so I only do the most complex one, the song part.
+     */
     public static Song readingSong(String theSong) {
         theSong = theSong.replaceAll("\\s+", "%20");
         String initialURL = "https://musicbrainz.org/ws/2/recording?query=" + theSong + "&fmt=xml";
@@ -64,4 +71,5 @@ public class FromMusicBrainz {
             return null;
         }
     }
+
 }
