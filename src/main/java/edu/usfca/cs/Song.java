@@ -1,9 +1,8 @@
 package edu.usfca.cs;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Song extends Entity {
     protected Artist artist;
