@@ -10,6 +10,9 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.util.ArrayList;
 
+/**
+ * Show the window for users
+ */
 public class GUI{
     public void showGUI(){
         JFrame frame = new JFrame("MUSIC");

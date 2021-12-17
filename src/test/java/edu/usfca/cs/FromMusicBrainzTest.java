@@ -13,4 +13,9 @@ public class FromMusicBrainzTest {
     void fromMB(){
         FromMusicBrainz.readingSong("merry christmas");
     }
+
+    @Test
+    void fromArtist(){
+        FromMusicBrainz.readingArtist("Ed Sheeran");
+    }
 }

@@ -71,5 +71,4 @@ public class FromMusicBrainz {
             return null;
         }
     }
-
 }
