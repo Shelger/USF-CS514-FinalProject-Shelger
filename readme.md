@@ -6,4 +6,4 @@
 The table shows the library, and you can add new songs by press the button "add", then enter the name of the song, and press ok.
 The song will be added automatically.
 6. Notice: The XML files in MusicBrainz are not stable, so the error happens sometimes. Try more times will get the output successfully.
-7. Test files include all files in the test folder and main methods in Playlist and GUI.
+7. Test files include all files in the test folder and main methods in GUI.
