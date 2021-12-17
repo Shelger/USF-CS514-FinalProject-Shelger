@@ -87,22 +87,13 @@
           <configuration>
             <archive>
               <manifest>
-                <mainClass>fully.qualified.MainClass</mainClass>
+                <mainClass>edu.usfca.cs.GUI</mainClass>
               </manifest>
             </archive>
             <descriptorRefs>
               <descriptorRef>jar-with-dependencies</descriptorRef>
             </descriptorRefs>
           </configuration>
-          <executions>
-            <execution>
-              <id>make-assembly</id> <!-- this is used for inheritance merges -->
-              <phase>package</phase> <!-- bind to the packaging phase -->
-              <goals>
-                <goal>single</goal>
-              </goals>
-            </execution>
-          </executions>
         </plugin>
 
 
@@ -128,6 +119,7 @@
             </archive>
           </configuration>
         </plugin>
+
       </plugins>
   </build>
 </project>
